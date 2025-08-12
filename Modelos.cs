@@ -8,6 +8,7 @@ namespace Trabajo_1.Modelos
     {
         public required string Nombre { get; set; }
         public required string Cuit { get; set; }
+        public string NombreCompleto => $"{Nombre} ({Cuit})";
     }
 
     public class Producto
@@ -21,10 +22,13 @@ namespace Trabajo_1.Modelos
         public required Producto Producto { get; set; }
         public int Cantidad { get; set; }
         public decimal Subtotal => Producto.Precio * Cantidad;
+
+        public object? PrecioUnitario { get; internal set; }
     }
 
     public class Factura
     {
+        public static object? Fecha { get; internal set; }
         public required Cliente Cliente { get; set; }
         public List<ItemFactura> Items { get; private set; } = new List<ItemFactura>();
 

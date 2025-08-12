@@ -13,13 +13,14 @@
             base.Dispose(disposing);
         }
         private System.Windows.Forms.ComboBox cmbClientes;
+        private System.Windows.Forms.ComboBox cmbProductos;
 
         private void InitializeComponent()
         {
             lblCliente = new Label();
             lblCuit = new Label();
             lblProducto = new Label();
-            txtProducto = new TextBox();
+            cmbProductos = new ComboBox();
             lblPrecio = new Label();
             txtPrecio = new TextBox();
             lblCantidad = new Label();
@@ -31,6 +32,7 @@
             txtCuit = new TextBox();
             btnFinalizar = new Button();
             cmbClientes = new ComboBox();
+            AgregarCliente = new Button();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             SuspendLayout();
             // 
@@ -61,12 +63,13 @@
             lblProducto.TabIndex = 4;
             lblProducto.Text = "Producto";
             // 
-            // txtProducto
+            // cmbProductos
             // 
-            txtProducto.Location = new Point(80, 87);
-            txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(300, 23);
-            txtProducto.TabIndex = 5;
+            cmbProductos.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbProductos.Location = new Point(80, 87);
+            cmbProductos.Name = "cmbProductos";
+            cmbProductos.Size = new Size(300, 23);
+            cmbProductos.TabIndex = 5;
             // 
             // lblPrecio
             // 
@@ -165,12 +168,24 @@
             cmbClientes.Name = "cmbClientes";
             cmbClientes.Size = new Size(300, 23);
             cmbClientes.TabIndex = 1;
+            cmbClientes.SelectedIndexChanged += cmbClientes_SelectedIndexChanged_1;
+            // 
+            // button1
+            // 
+            AgregarCliente.Location = new Point(386, 17);
+            AgregarCliente.Name = "btnAgregarCliente";
+            AgregarCliente.Size = new Size(82, 23);
+            AgregarCliente.TabIndex = 16;
+            AgregarCliente.Text = "AGREGAR";
+            AgregarCliente.UseVisualStyleBackColor = true;
+            AgregarCliente.Click += AgregarCliente_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(480, 420);
+            Controls.Add(AgregarCliente);
             Controls.Add(cmbClientes);
             Controls.Add(btnFinalizar);
             Controls.Add(txtTotal);
@@ -181,7 +196,7 @@
             Controls.Add(lblCantidad);
             Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
-            Controls.Add(txtProducto);
+            Controls.Add(cmbProductos);
             Controls.Add(lblProducto);
             Controls.Add(lblCuit);
             Controls.Add(lblCliente);
@@ -199,7 +214,6 @@
         private System.Windows.Forms.Label lblCuit;
         private System.Windows.Forms.TextBox txtCuit;
         private System.Windows.Forms.Label lblProducto;
-        private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblCantidad;
@@ -209,5 +223,6 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnFinalizar;
+        private Button AgregarCliente;
     }
 }
