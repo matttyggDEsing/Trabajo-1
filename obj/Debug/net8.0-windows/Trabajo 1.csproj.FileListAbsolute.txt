@@ -1,0 +1,20 @@
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\Trabajo 1.exe
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\Trabajo 1.deps.json
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\Trabajo 1.runtimeconfig.json
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\Trabajo 1.dll
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\Trabajo 1.pdb
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo_1.Form1.resources
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.csproj.GenerateResource.cache
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.AssemblyInfoInputs.cache
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.AssemblyInfo.cs
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.csproj.CoreCompileInputs.cache
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.dll
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\refint\Trabajo 1.dll
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.pdb
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.genruntimeconfig.cache
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\ref\Trabajo 1.dll
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\Microsoft.Data.Sqlite.dll
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\SQLitePCLRaw.core.dll
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.csproj.AssemblyReference.cache
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo 1.csproj.Up2Date

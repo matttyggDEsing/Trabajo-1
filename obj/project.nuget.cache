@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "/rhSAkPlL5U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Trabajo 1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maty Anderegg\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.8\\microsoft.data.sqlite.core.9.0.8.nupkg.sha512",
+    "C:\\Users\\Maty Anderegg\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\Maty Anderegg\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}
