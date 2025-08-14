@@ -31,7 +31,7 @@ namespace Trabajo_1.DB
             """
             CREATE TABLE IF NOT EXISTS Clientes (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                Nombre TEXT NOT NULL UNIQUE,
+                Nombre TEXT NOT NULL,
                 Cuit TEXT NOT NULL UNIQUE
             );
             """,
@@ -39,7 +39,7 @@ namespace Trabajo_1.DB
             CREATE TABLE IF NOT EXISTS Productos (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 Nombre TEXT NOT NULL UNIQUE,
-                Precio REAL NOT NULL CHECK(Precio >= 0)
+                Precio REAL NOT NULL
             );
             """,
             """
@@ -116,16 +116,22 @@ namespace Trabajo_1.DB
 
         public static void GuardarFactura(Factura factura)
         {
-            string dbPath = Path.Combine(Application.StartupPath, "sistema.db");
-            var connectionString = $"Data Source={dbPath};";
-
-            using var conexion = new SqliteConnection(connectionString);
+            using var conexion = new SqliteConnection("Data Source=sistema.db");
             conexion.Open();
 
             using var transaccion = conexion.BeginTransaction();
             try
             {
-                // 1. Insertar el cliente solo si NO existe (por CUIT)
+                // Normalizar datos
+                factura.Cliente.Nombre = factura.Cliente.Nombre.Trim();
+                factura.Cliente.Cuit = factura.Cliente.Cuit.Trim();
+
+                foreach (var item in factura.Items)
+                {
+                    item.Producto.Nombre = item.Producto.Nombre.Trim();
+                }
+
+                // Insertar cliente si no existe (basado en CUIT único)
                 var comandoCliente = new SqliteCommand(
                     "INSERT OR IGNORE INTO Clientes (Nombre, Cuit) VALUES (@Nombre, @Cuit);",
                     conexion, transaccion
@@ -134,19 +140,15 @@ namespace Trabajo_1.DB
                 comandoCliente.Parameters.AddWithValue("@Cuit", factura.Cliente.Cuit);
                 comandoCliente.ExecuteNonQuery();
 
-                // 2. Obtener el ID del cliente por CUIT
-                var comandoGetId = new SqliteCommand(
+                // Obtener Id del cliente
+                comandoCliente = new SqliteCommand(
                     "SELECT Id FROM Clientes WHERE Cuit = @Cuit;",
                     conexion, transaccion
                 );
-                comandoGetId.Parameters.AddWithValue("@Cuit", factura.Cliente.Cuit);
-                var clienteIdObj = comandoGetId.ExecuteScalar();
-                if (clienteIdObj is null)
-                    throw new Exception("No se pudo obtener el Id del cliente.");
+                comandoCliente.Parameters.AddWithValue("@Cuit", factura.Cliente.Cuit);
+                var clienteId = Convert.ToInt64(comandoCliente.ExecuteScalar());
 
-                var clienteId = Convert.ToInt64(clienteIdObj);
-
-                // 3. Insertar la factura (solo con ClienteId)
+                // Insertar factura
                 var comandoFactura = new SqliteCommand(
                     "INSERT INTO Facturas (ClienteId) VALUES (@ClienteId);",
                     conexion, transaccion
@@ -154,21 +156,16 @@ namespace Trabajo_1.DB
                 comandoFactura.Parameters.AddWithValue("@ClienteId", clienteId);
                 comandoFactura.ExecuteNonQuery();
 
-                // 4. Obtener el ID de la factura recién insertada
-                var comandoFacturaId = new SqliteCommand(
+                // Obtener Id de la factura
+                comandoFactura = new SqliteCommand(
                     "SELECT last_insert_rowid();",
                     conexion, transaccion
                 );
-                var facturaIdObj = comandoFacturaId.ExecuteScalar();
-                if (facturaIdObj is null)
-                    throw new Exception("No se pudo obtener el Id de la factura.");
+                var facturaId = Convert.ToInt64(comandoFactura.ExecuteScalar());
 
-                var facturaId = Convert.ToInt64(facturaIdObj);
-
-                // 5. Insertar los productos y los ítems de la factura
+                // Insertar productos si no existen
                 foreach (var item in factura.Items)
                 {
-                    // Insertar o ignorar el producto
                     var comandoProducto = new SqliteCommand(
                         "INSERT OR IGNORE INTO Productos (Nombre, Precio) VALUES (@Nombre, @Precio);",
                         conexion, transaccion
@@ -177,29 +174,15 @@ namespace Trabajo_1.DB
                     comandoProducto.Parameters.AddWithValue("@Precio", item.Producto.Precio);
                     comandoProducto.ExecuteNonQuery();
 
-                    // Obtener el ID del producto
-                    var comandoProductoId = new SqliteCommand(
+                    // Obtener Id del producto
+                    comandoProducto = new SqliteCommand(
                         "SELECT Id FROM Productos WHERE Nombre = @Nombre;",
                         conexion, transaccion
                     );
-                    comandoProductoId.Parameters.AddWithValue("@Nombre", item.Producto.Nombre);
-                    var productoIdObj = comandoProductoId.ExecuteScalar();
-                    if (productoIdObj is null)
-                        throw new Exception("No se pudo obtener el Id del producto.");
+                    comandoProducto.Parameters.AddWithValue("@Nombre", item.Producto.Nombre);
+                    var productoId = Convert.ToInt64(comandoProducto.ExecuteScalar());
 
-                    var productoId = Convert.ToInt64(productoIdObj);
-
-                    // Insertar el ítem de la factura
-                    var comandoItem = new SqliteCommand(
-                        "INSERT INTO FacturaItems (FacturaId, ProductoId, Cantidad, PrecioUnitario) " +
-                        "VALUES (@FacturaId, @ProductoId, @Cantidad, @PrecioUnitario);",
-                        conexion, transaccion
-                    );
-                    comandoItem.Parameters.AddWithValue("@FacturaId", facturaId);
-                    comandoItem.Parameters.AddWithValue("@ProductoId", productoId);
-                    comandoItem.Parameters.AddWithValue("@Cantidad", item.Cantidad);
-                    comandoItem.Parameters.AddWithValue("@PrecioUnitario", item.Producto.Precio);
-                    comandoItem.ExecuteNonQuery();
+                    // Aquí deberías registrar en una tabla intermedia FacturaProductos si la tuvieras
                 }
 
                 transaccion.Commit();
@@ -210,6 +193,7 @@ namespace Trabajo_1.DB
                 throw;
             }
         }
+
 
         public static void GuardarCliente(Cliente cliente)
         {

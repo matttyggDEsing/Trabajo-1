@@ -12,6 +12,7 @@ namespace Trabajo_1.clientes
 {
     public partial class Form2 : Form  // Aquí corregí la herencia
     {
+        public bool ClienteAgregado { get; private set; } = false;
         public Form2()
         {
             InitializeComponent();
@@ -40,7 +41,11 @@ namespace Trabajo_1.clientes
             // Limpiar campos después de guardar
             txtNombre.Clear();
             txtCuit.Clear();
+            ClienteAgregado = true;
+            this.Close();
         }
+      
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

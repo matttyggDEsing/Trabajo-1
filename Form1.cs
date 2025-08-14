@@ -12,9 +12,9 @@ namespace Trabajo_1
         {
             InitializeComponent();
             Trabajo_1.clientes.Form2 clientesForm = new Trabajo_1.clientes.Form2();
-           
+
             this.Load += new System.EventHandler(this.Form1_Load);
-           
+
             this.cmbClientes.SelectedIndexChanged += new System.EventHandler(this.cmbClientes_SelectedIndexChanged);
             this.cmbProductos.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             this.AgregarCliente.Click += new System.EventHandler(this.AgregarCliente_Click);
@@ -38,7 +38,7 @@ namespace Trabajo_1
             // Mostrar "Nombre (CUIT)" en el ComboBox
             cmbClientes.DataSource = clientes;
             cmbClientes.DisplayMember = "NombreCompleto";
-            cmbClientes.ValueMember = "Cuit";   
+            cmbClientes.ValueMember = "Cuit";
 
             this.cmbClientes.SelectedIndexChanged += this.cmbClientes_SelectedIndexChanged;
         }
@@ -163,7 +163,7 @@ namespace Trabajo_1
                 txtCuit.Text = clienteSeleccionado.Cuit;
             }
         }
-        private void cmbProductos_SelectedIndexChanged_1(object sender, EventArgs e)    
+        private void cmbProductos_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cmbProductos.SelectedItem is Producto productoSeleccionado)
             {
@@ -175,7 +175,19 @@ namespace Trabajo_1
         {
             var formClientes = new Trabajo_1.clientes.Form2();
             formClientes.ShowDialog();
-            CargarClientes(); // Refresca la lista después de cerrar el formulario
+
+            if (formClientes.ClienteAgregado)
+            {
+                CargarClientes(); // Solo refresca si realmente se agregó algo
+            }
         }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+            var formFacturas = new FormFacturas();
+            formFacturas.ShowDialog();
+        }
+
+
     }
 }

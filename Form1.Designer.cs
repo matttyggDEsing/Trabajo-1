@@ -33,6 +33,7 @@
             btnFinalizar = new Button();
             cmbClientes = new ComboBox();
             AgregarCliente = new Button();
+            btnFacturas = new Button();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             SuspendLayout();
             // 
@@ -170,21 +171,31 @@
             cmbClientes.TabIndex = 1;
             cmbClientes.SelectedIndexChanged += cmbClientes_SelectedIndexChanged_1;
             // 
-            // button1
+            // AgregarCliente
             // 
             AgregarCliente.Location = new Point(386, 17);
-            AgregarCliente.Name = "btnAgregarCliente";
+            AgregarCliente.Name = "AgregarCliente";
             AgregarCliente.Size = new Size(82, 23);
             AgregarCliente.TabIndex = 16;
             AgregarCliente.Text = "AGREGAR";
             AgregarCliente.UseVisualStyleBackColor = true;
             AgregarCliente.Click += AgregarCliente_Click;
             // 
+            // btnFacturas
+            // 
+            btnFacturas.Location = new Point(286, 327);
+            btnFacturas.Name = "btnFacturas";
+            btnFacturas.Size = new Size(150, 30);
+            btnFacturas.TabIndex = 0;
+            btnFacturas.Text = "MOSTRAR FACTURAS";
+            btnFacturas.Click += btnFacturas_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(480, 420);
+            Controls.Add(btnFacturas);
             Controls.Add(AgregarCliente);
             Controls.Add(cmbClientes);
             Controls.Add(btnFinalizar);
@@ -208,7 +219,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
-
+        private System.Windows.Forms.Button btnFacturas;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblCuit;
