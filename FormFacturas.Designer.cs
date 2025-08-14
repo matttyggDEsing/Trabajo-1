@@ -3,11 +3,6 @@
     partial class FormFacturas
     {
         private System.ComponentModel.IContainer components = null;
-        private ComboBox cmbClientes;
-        private ComboBox cmbProductos;
-        private Button btnBuscarCliente;
-        private Button btnBuscarProducto;
-        private DataGridView dgvFacturas;
 
         protected override void Dispose(bool disposing)
         {
@@ -18,49 +13,104 @@
             base.Dispose(disposing);
         }
 
+        #region Código generado por el Diseñador de Windows Forms
+
         private void InitializeComponent()
         {
             cmbClientes = new ComboBox();
-            cmbProductos = new ComboBox();
-            btnBuscarCliente = new Button();
-            btnBuscarProducto = new Button();
+            dtpFecha = new DateTimePicker();
+            btnBuscar = new Button();
             dgvFacturas = new DataGridView();
-
+            lblCliente = new Label();
+            lblFecha = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvFacturas).BeginInit();
             SuspendLayout();
-
-            cmbClientes.Location = new Point(20, 20);
-            cmbClientes.Size = new Size(200, 23);
-
-            btnBuscarCliente.Location = new Point(230, 20);
-            btnBuscarCliente.Size = new Size(100, 23);
-            btnBuscarCliente.Text = "Por Cliente";
-            btnBuscarCliente.Click += btnBuscarCliente_Click;
-
-            cmbProductos.Location = new Point(20, 60);
-            cmbProductos.Size = new Size(200, 23);
-
-            btnBuscarProducto.Location = new Point(230, 60);
-            btnBuscarProducto.Size = new Size(100, 23);
-            btnBuscarProducto.Text = "Por Producto";
-            btnBuscarProducto.Click += btnBuscarProducto_Click;
-
-            dgvFacturas.Location = new Point(20, 100);
-            dgvFacturas.Size = new Size(500, 300);
-            dgvFacturas.ReadOnly = true;
+            // 
+            // cmbClientes
+            // 
+            cmbClientes.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbClientes.FormattingEnabled = true;
+            cmbClientes.Location = new Point(80, 20);
+            cmbClientes.Name = "cmbClientes";
+            cmbClientes.Size = new Size(220, 23);
+            cmbClientes.TabIndex = 0;
+            // 
+            // dtpFecha
+            // 
+            dtpFecha.Format = DateTimePickerFormat.Short;
+            dtpFecha.Location = new Point(80, 60);
+            dtpFecha.Name = "dtpFecha";
+            dtpFecha.Size = new Size(220, 23);
+            dtpFecha.TabIndex = 1;
+            dtpFecha.ValueChanged += dtpFecha_ValueChanged;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(320, 20);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(140, 63);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // dgvFacturas
+            // 
             dgvFacturas.AllowUserToAddRows = false;
-
-            ClientSize = new Size(550, 420);
-            Controls.Add(cmbClientes);
-            Controls.Add(btnBuscarCliente);
-            Controls.Add(cmbProductos);
-            Controls.Add(btnBuscarProducto);
+            dgvFacturas.AllowUserToDeleteRows = false;
+            dgvFacturas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFacturas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFacturas.Location = new Point(20, 110);
+            dgvFacturas.Name = "dgvFacturas";
+            dgvFacturas.ReadOnly = true;
+            dgvFacturas.Size = new Size(600, 300);
+            dgvFacturas.TabIndex = 3;
+            dgvFacturas.CellContentClick += dgvFacturas_CellContentClick;
+            // 
+            // lblCliente
+            // 
+            lblCliente.AutoSize = true;
+            lblCliente.Location = new Point(20, 23);
+            lblCliente.Name = "lblCliente";
+            lblCliente.Size = new Size(47, 15);
+            lblCliente.TabIndex = 4;
+            lblCliente.Text = "Cliente:";
+            // 
+            // lblFecha
+            // 
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(20, 63);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(41, 15);
+            lblFecha.TabIndex = 5;
+            lblFecha.Text = "Fecha:";
+            // 
+            // FormFacturas
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(650, 440);
+            Controls.Add(lblFecha);
+            Controls.Add(lblCliente);
             Controls.Add(dgvFacturas);
-
-            Text = "Facturas";
+            Controls.Add(btnBuscar);
+            Controls.Add(dtpFecha);
+            Controls.Add(cmbClientes);
+            Name = "FormFacturas";
+            Text = "Listado de Facturas";
             Load += FormFacturas_Load;
             ((System.ComponentModel.ISupportInitialize)dgvFacturas).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
+
+        #endregion
+
+        private System.Windows.Forms.ComboBox cmbClientes;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView dgvFacturas;
+        private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Label lblFecha;
     }
 }

@@ -28,81 +28,66 @@ namespace Trabajo_1
                     Value = readerClientes.GetInt64(0)
                 });
             }
-            readerClientes.Close();
 
-            // Cargar productos
-            using var cmdProductos = new SqliteCommand("SELECT Id, Nombre FROM Productos", conexion);
-            using var readerProductos = cmdProductos.ExecuteReader();
-            while (readerProductos.Read())
-            {
-                cmbProductos.Items.Add(new ComboboxItem
-                {
-                    Text = readerProductos.GetString(1),
-                    Value = readerProductos.GetInt64(0)
-                });
-            }
+            // Seleccionar la fecha actual por defecto
+            dtpFecha.Value = DateTime.Today;
+
+            // Mostrar facturas de hoy al cargar
+            CargarFacturas();
         }
 
-        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (cmbClientes.SelectedItem is ComboboxItem cliente)
-            {
-                CargarFacturasPorCampo("ClienteId", cliente.Value);
-            }
+            CargarFacturas();
         }
 
-        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
         {
-            if (cmbProductos.SelectedItem is ComboboxItem producto)
-            {
-                CargarFacturasPorProducto(producto.Value);
-            }
+            CargarFacturas();
         }
 
-        private void CargarFacturasPorCampo(string campo, object valor)
+        private void CargarFacturas()
         {
             using var conexion = new SqliteConnection("Data Source=sistema.db");
             conexion.Open();
 
-            string sql = $@"
-                SELECT f.Id, c.Nombre AS Cliente, f.Fecha
-                FROM Facturas f
-                JOIN Clientes c ON c.Id = f.ClienteId
-                WHERE f.{campo} = @valor
-                ORDER BY f.Fecha DESC";
-
-            using var cmd = new SqliteCommand(sql, conexion);
-            cmd.Parameters.AddWithValue("@valor", valor);
-
-            using var reader = cmd.ExecuteReader();
-            var dt = new DataTable();
-            dt.Load(reader);
-
-            dgvFacturas.DataSource = dt;
-        }
-
-        private void CargarFacturasPorProducto(object productoId)
-        {
-            using var conexion = new SqliteConnection("Data Source=sistema.db");
-            conexion.Open();
-
-            // Necesita la tabla intermedia FacturaProductos para que esto funcione
             string sql = @"
-                SELECT f.Id, c.Nombre AS Cliente, f.Fecha
+                SELECT 
+                    f.Id AS FacturaId,
+                    f.Fecha,
+                    c.Nombre AS Cliente,
+                    p.Nombre AS Producto,
+                    fp.Cantidad,
+                    p.Precio AS PrecioUnitario,
+                    (fp.Cantidad * p.Precio) AS Subtotal
                 FROM Facturas f
                 JOIN Clientes c ON c.Id = f.ClienteId
                 JOIN FacturaProductos fp ON fp.FacturaId = f.Id
-                WHERE fp.ProductoId = @prodId
-                ORDER BY f.Fecha DESC";
+                JOIN Productos p ON p.Id = fp.ProductoId
+                WHERE date(f.Fecha) = date(@fecha)";
+
+            // Si hay cliente seleccionado, filtrar por cliente
+            if (cmbClientes.SelectedItem is ComboboxItem cliente)
+                sql += " AND f.ClienteId = @clienteId";
+
+            sql += " ORDER BY f.Fecha, f.Id;";
 
             using var cmd = new SqliteCommand(sql, conexion);
-            cmd.Parameters.AddWithValue("@prodId", productoId);
+            cmd.Parameters.AddWithValue("@fecha", dtpFecha.Value.ToString("yyyy-MM-dd"));
+
+            if (cmbClientes.SelectedItem is ComboboxItem clienteSel)
+                cmd.Parameters.AddWithValue("@clienteId", clienteSel.Value);
 
             using var reader = cmd.ExecuteReader();
             var dt = new DataTable();
             dt.Load(reader);
 
             dgvFacturas.DataSource = dt;
+        }
+
+        private void dgvFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

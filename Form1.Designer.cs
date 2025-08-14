@@ -14,6 +14,7 @@
         }
         private System.Windows.Forms.ComboBox cmbClientes;
         private System.Windows.Forms.ComboBox cmbProductos;
+        private System.Windows.Forms.Button btnAgregarProducto;
 
         private void InitializeComponent()
         {
@@ -34,6 +35,7 @@
             cmbClientes = new ComboBox();
             AgregarCliente = new Button();
             btnFacturas = new Button();
+            btnAgregarProducto = new Button();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             SuspendLayout();
             // 
@@ -91,7 +93,7 @@
             // lblCantidad
             // 
             lblCantidad.AutoSize = true;
-            lblCantidad.Location = new Point(200, 125);
+            lblCantidad.Location = new Point(216, 125);
             lblCantidad.Name = "lblCantidad";
             lblCantidad.Size = new Size(55, 15);
             lblCantidad.TabIndex = 8;
@@ -99,7 +101,7 @@
             // 
             // nudCantidad
             // 
-            nudCantidad.Location = new Point(260, 122);
+            nudCantidad.Location = new Point(277, 122);
             nudCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudCantidad.Name = "nudCantidad";
             nudCantidad.Size = new Size(60, 23);
@@ -108,7 +110,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(350, 120);
+            btnAgregar.Location = new Point(368, 118);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(100, 27);
             btnAgregar.TabIndex = 10;
@@ -148,6 +150,7 @@
             // 
             txtCuit.Location = new Point(80, 55);
             txtCuit.Name = "txtCuit";
+            txtCuit.ReadOnly = true;
             txtCuit.Size = new Size(300, 23);
             txtCuit.TabIndex = 15;
             // 
@@ -183,18 +186,28 @@
             // 
             // btnFacturas
             // 
-            btnFacturas.Location = new Point(286, 327);
+            btnFacturas.Location = new Point(300, 327);
             btnFacturas.Name = "btnFacturas";
             btnFacturas.Size = new Size(150, 30);
             btnFacturas.TabIndex = 0;
             btnFacturas.Text = "MOSTRAR FACTURAS";
             btnFacturas.Click += btnFacturas_Click;
             // 
+            // btnAgregarProducto
+            // 
+            btnAgregarProducto.Location = new Point(387, 84);
+            btnAgregarProducto.Name = "btnAgregarProducto";
+            btnAgregarProducto.Size = new Size(81, 30);
+            btnAgregarProducto.TabIndex = 17;
+            btnAgregarProducto.Text = "Agregar Producto";
+            btnAgregarProducto.UseVisualStyleBackColor = true;
+            btnAgregarProducto.Click += btnAgregarProducto_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 420);
+            ClientSize = new Size(484, 420);
             Controls.Add(btnFacturas);
             Controls.Add(AgregarCliente);
             Controls.Add(cmbClientes);
@@ -212,6 +225,7 @@
             Controls.Add(lblCuit);
             Controls.Add(lblCliente);
             Controls.Add(txtCuit);
+            Controls.Add(btnAgregarProducto);
             Name = "Form1";
             Text = "Facturación Productos";
             Load += Form1_Load;

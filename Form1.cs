@@ -25,7 +25,16 @@ namespace Trabajo_1
         {
             BaseDatos.Inicializar();
             LimpiarFormulario(); // Usamos LimpiarFormulario para la carga inicial
+
+
+            txtCuit.ReadOnly = true;
+            txtPrecio.ReadOnly = true;
+            txtTotal.ReadOnly = true;
         }
+
+
+
+
 
         // --- LÓGICA DE CARGA Y LIMPIEZA ---
 
@@ -90,6 +99,19 @@ namespace Trabajo_1
             itemsFactura.Add(item);
             ActualizarListaYTotal();
         }
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            var formProductos = new Trabajo_1.productos.FormAgregarProducto();
+            formProductos.ShowDialog();
+
+            if (formProductos.ProductoAgregado)
+            {
+                CargarProductos();
+                cmbProductos.SelectedIndex = cmbProductos.Items.Count - 1; // Seleccionar último
+            }
+        }
+
+
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
