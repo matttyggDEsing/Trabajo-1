@@ -10,6 +10,8 @@ namespace Trabajo_1.productos
         public FormAgregarProducto()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
 
         }
 

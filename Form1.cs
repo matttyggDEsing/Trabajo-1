@@ -11,6 +11,8 @@ namespace Trabajo_1
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             Trabajo_1.clientes.Form2 clientesForm = new Trabajo_1.clientes.Form2();
 
             this.Load += new System.EventHandler(this.Form1_Load);

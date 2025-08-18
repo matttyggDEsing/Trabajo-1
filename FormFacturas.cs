@@ -10,6 +10,8 @@ namespace Trabajo_1
         public FormFacturas()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
         private void FormFacturas_Load(object sender, EventArgs e)
@@ -17,7 +19,7 @@ namespace Trabajo_1
             using var conexion = new SqliteConnection("Data Source=sistema.db");
             conexion.Open();
 
-            // Cargar clientes
+            // Cargar clientes  
             using var cmdClientes = new SqliteCommand("SELECT Id, Nombre FROM Clientes", conexion);
             using var readerClientes = cmdClientes.ExecuteReader();
             while (readerClientes.Read())
@@ -29,10 +31,10 @@ namespace Trabajo_1
                 });
             }
 
-            // Seleccionar la fecha actual por defecto
+            // Seleccionar la fecha actual por defecto  
             dtpFecha.Value = DateTime.Today;
 
-            // Mostrar facturas de hoy al cargar
+            // Mostrar facturas de hoy al cargar  
             CargarFacturas();
         }
 
@@ -52,38 +54,43 @@ namespace Trabajo_1
             conexion.Open();
 
             string sql = @"
-                SELECT 
-                    f.Id AS FacturaId,
-                    f.Fecha,
-                    c.Nombre AS Cliente,
-                    p.Nombre AS Producto,
-                    fp.Cantidad,
-                    p.Precio AS PrecioUnitario,
-                    (fp.Cantidad * p.Precio) AS Subtotal
-                FROM Facturas f
-                JOIN Clientes c ON c.Id = f.ClienteId
-                JOIN FacturaProductos fp ON fp.FacturaId = f.Id
-                JOIN Productos p ON p.Id = fp.ProductoId
-                WHERE date(f.Fecha) = date(@fecha)";
+        SELECT 
+            f.Id AS FacturaId,
+            f.Fecha,
+            c.Nombre AS Cliente,
+            p.Nombre AS Producto,
+            fp.Cantidad,
+            p.Precio AS PrecioUnitario,
+            (fp.Cantidad * p.Precio) AS Subtotal,
+            ROW_NUMBER() OVER() AS RowId -- 🔹 Columna única para evitar conflicto
+        FROM Facturas f
+        JOIN Clientes c ON c.Id = f.ClienteId
+        JOIN FacturaProductos fp ON fp.FacturaId = f.Id
+        JOIN Productos p ON p.Id = fp.ProductoId
+        WHERE date(f.Fecha) = date(@fecha)";
 
-            // Si hay cliente seleccionado, filtrar por cliente
-            if (cmbClientes.SelectedItem is ComboboxItem cliente)
+            if (cmbClientes.SelectedItem is ComboboxItem clienteSel)
                 sql += " AND f.ClienteId = @clienteId";
 
             sql += " ORDER BY f.Fecha, f.Id;";
 
             using var cmd = new SqliteCommand(sql, conexion);
             cmd.Parameters.AddWithValue("@fecha", dtpFecha.Value.ToString("yyyy-MM-dd"));
-
-            if (cmbClientes.SelectedItem is ComboboxItem clienteSel)
-                cmd.Parameters.AddWithValue("@clienteId", clienteSel.Value);
+            if (cmbClientes.SelectedItem is ComboboxItem cliSel)
+                cmd.Parameters.AddWithValue("@clienteId", cliSel.Value);
 
             using var reader = cmd.ExecuteReader();
+
             var dt = new DataTable();
+            dt.BeginLoadData();  // Evita validar mientras carga
             dt.Load(reader);
+            dt.EndLoadData();    // Ahora no dará error porque las filas ya son únicas
 
             dgvFacturas.DataSource = dt;
         }
+
+
+
 
         private void dgvFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
