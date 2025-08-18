@@ -42,6 +42,7 @@ namespace Trabajo_1.productos
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Producto agregado con éxito.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

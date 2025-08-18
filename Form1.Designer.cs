@@ -13,6 +13,7 @@
             base.Dispose(disposing);
         }
         private System.Windows.Forms.ComboBox cmbClientes;
+        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.ComboBox cmbProductos;
         private System.Windows.Forms.Button btnAgregarProducto;
 
@@ -27,7 +28,6 @@
             lblCantidad = new Label();
             nudCantidad = new NumericUpDown();
             btnAgregar = new Button();
-            lstProductos = new ListBox();
             lblTotal = new Label();
             txtTotal = new TextBox();
             txtCuit = new TextBox();
@@ -36,7 +36,11 @@
             AgregarCliente = new Button();
             btnFacturas = new Button();
             btnAgregarProducto = new Button();
+            btnActualizar = new Button();
+            dgvProductos = new DataGridView();
+            btnBorrar = new Button();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
             // lblCliente
@@ -118,21 +122,11 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // lstProductos
-            // 
-            lstProductos.FormattingEnabled = true;
-            lstProductos.ItemHeight = 15;
-            lstProductos.Location = new Point(80, 160);
-            lstProductos.Name = "lstProductos";
-            lstProductos.Size = new Size(370, 154);
-            lstProductos.TabIndex = 11;
-            lstProductos.SelectedIndexChanged += lstProductos_SelectedIndexChanged;
-            // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblTotal.Location = new Point(12, 330);
+            lblTotal.Location = new Point(18, 390);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(43, 15);
             lblTotal.TabIndex = 12;
@@ -140,7 +134,7 @@
             // 
             // txtTotal
             // 
-            txtTotal.Location = new Point(80, 327);
+            txtTotal.Location = new Point(80, 382);
             txtTotal.Name = "txtTotal";
             txtTotal.ReadOnly = true;
             txtTotal.Size = new Size(150, 23);
@@ -156,9 +150,9 @@
             // 
             // btnFinalizar
             // 
-            btnFinalizar.Location = new Point(80, 365);
+            btnFinalizar.Location = new Point(320, 377);
             btnFinalizar.Name = "btnFinalizar";
-            btnFinalizar.Size = new Size(370, 30);
+            btnFinalizar.Size = new Size(260, 30);
             btnFinalizar.TabIndex = 14;
             btnFinalizar.Text = "FINALIZAR FACTURA";
             btnFinalizar.UseVisualStyleBackColor = true;
@@ -176,17 +170,17 @@
             // 
             // AgregarCliente
             // 
-            AgregarCliente.Location = new Point(386, 17);
+            AgregarCliente.Location = new Point(398, 16);
             AgregarCliente.Name = "AgregarCliente";
-            AgregarCliente.Size = new Size(82, 23);
+            AgregarCliente.Size = new Size(120, 23);
             AgregarCliente.TabIndex = 16;
-            AgregarCliente.Text = "AGREGAR";
+            AgregarCliente.Text = "Agregar Cliente";
             AgregarCliente.UseVisualStyleBackColor = true;
             AgregarCliente.Click += AgregarCliente_Click;
             // 
             // btnFacturas
             // 
-            btnFacturas.Location = new Point(300, 327);
+            btnFacturas.Location = new Point(80, 420);
             btnFacturas.Name = "btnFacturas";
             btnFacturas.Size = new Size(150, 30);
             btnFacturas.TabIndex = 0;
@@ -195,26 +189,58 @@
             // 
             // btnAgregarProducto
             // 
-            btnAgregarProducto.Location = new Point(387, 84);
+            btnAgregarProducto.Location = new Point(398, 88);
             btnAgregarProducto.Name = "btnAgregarProducto";
-            btnAgregarProducto.Size = new Size(81, 30);
+            btnAgregarProducto.Size = new Size(120, 24);
             btnAgregarProducto.TabIndex = 17;
             btnAgregarProducto.Text = "Agregar Producto";
             btnAgregarProducto.UseVisualStyleBackColor = true;
             btnAgregarProducto.Click += btnAgregarProducto_Click;
             // 
+            // btnActualizar
+            // 
+            btnActualizar.Location = new Point(586, 312);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(79, 30);
+            btnActualizar.TabIndex = 0;
+            btnActualizar.Text = "Actualizar Productos";
+            btnActualizar.Click += btnActualizar_Click;
+            // 
+            // dgvProductos
+            // 
+            dgvProductos.AllowUserToAddRows = false;
+            dgvProductos.AllowUserToDeleteRows = false;
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProductos.Location = new Point(80, 151);
+            dgvProductos.Name = "dgvProductos";
+            dgvProductos.ReadOnly = true;
+            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProductos.Size = new Size(500, 200);
+            dgvProductos.TabIndex = 0;
+            dgvProductos.Columns.Add("Producto", "Producto");
+            dgvProductos.Columns.Add("Cantidad", "Cantidad");
+            dgvProductos.Columns.Add("PrecioUnitario", "Precio Unit.");
+            dgvProductos.Columns.Add("Subtotal", "Subtotal");
+            // 
+            // btnBorrar
+            // 
+            btnBorrar.Location = new Point(586, 278);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(79, 28);
+            btnBorrar.TabIndex = 17;
+            btnBorrar.Text = "Borrar";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 420);
+            ClientSize = new Size(707, 540);
             Controls.Add(btnFacturas);
             Controls.Add(AgregarCliente);
             Controls.Add(cmbClientes);
             Controls.Add(btnFinalizar);
             Controls.Add(txtTotal);
             Controls.Add(lblTotal);
-            Controls.Add(lstProductos);
             Controls.Add(btnAgregar);
             Controls.Add(nudCantidad);
             Controls.Add(lblCantidad);
@@ -225,15 +251,21 @@
             Controls.Add(lblCuit);
             Controls.Add(lblCliente);
             Controls.Add(txtCuit);
+            Controls.Add(dgvProductos);
+            Controls.Add(btnBorrar);
+            Controls.Add(btnActualizar);
             Controls.Add(btnAgregarProducto);
             Name = "Form1";
             Text = "Facturación Productos";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)nudCantidad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
+        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnFacturas;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblCuit;
@@ -244,7 +276,6 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ListBox lstProductos;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnFinalizar;

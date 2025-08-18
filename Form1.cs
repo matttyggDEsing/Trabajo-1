@@ -92,15 +92,64 @@ namespace Trabajo_1
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (cmbProductos.SelectedItem is not Producto productoSeleccionado)
-            {
-                MessageBox.Show("Por favor, seleccione un producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            var item = new ItemFactura { Producto = productoSeleccionado, Cantidad = (int)nudCantidad.Value };
-            itemsFactura.Add(item);
-            ActualizarListaYTotal();
+            if (cmbProductos.SelectedItem == null) return;
+
+            string producto = cmbProductos.Text;
+            int cantidad = (int)nudCantidad.Value;
+            decimal precio = decimal.Parse(txtPrecio.Text);
+            decimal subtotal = cantidad * precio;
+
+            dgvProductos.Rows.Add(producto, cantidad, precio, subtotal);
+
+            CalcularTotal();
         }
+        private void CalcularTotal()
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow row in dgvProductos.Rows)
+            {
+                total += Convert.ToDecimal(row.Cells["Subtotal"].Value);
+            }
+            txtTotal.Text = total.ToString("0.00");
+        }
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (dgvProductos.SelectedRows.Count > 0)
+            {
+                var fila = dgvProductos.SelectedRows[0];
+
+                // Pedimos nueva cantidad
+                int cantidad = (int)nudCantidad.Value;
+                decimal precio = decimal.Parse(txtPrecio.Text);
+                decimal subtotal = cantidad * precio;
+
+                fila.Cells["Cantidad"].Value = cantidad;
+                fila.Cells["PrecioUnitario"].Value = precio;
+                fila.Cells["Subtotal"].Value = subtotal;
+
+                CalcularTotal();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto para actualizar.", "Atención",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (dgvProductos.SelectedRows.Count > 0)
+            {
+                dgvProductos.Rows.RemoveAt(dgvProductos.SelectedRows[0].Index);
+                CalcularTotal();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto para borrar.", "Atención",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             var formProductos = new Trabajo_1.productos.FormAgregarProducto();
@@ -153,11 +202,11 @@ namespace Trabajo_1
 
         private void ActualizarListaYTotal()
         {
-            lstProductos.Items.Clear();
+            dgvProductos.Rows.Clear();
             decimal total = 0;
             foreach (var item in itemsFactura)
             {
-                lstProductos.Items.Add($"{item.Cantidad} x {item.Producto.Nombre} - ${item.Subtotal:0.00}");
+                dgvProductos.Rows.Add($"{item.Cantidad} x {item.Producto.Nombre} - ${item.Subtotal:0.00}");
                 total += item.Subtotal;
             }
             txtTotal.Text = total.ToString("C");
@@ -174,7 +223,7 @@ namespace Trabajo_1
             txtPrecio.Clear();
             nudCantidad.Value = 1;
             itemsFactura.Clear();
-            lstProductos.Items.Clear();
+            dgvProductos.Rows.Clear();
             txtTotal.Clear();
         }
 
@@ -197,13 +246,15 @@ namespace Trabajo_1
 
         private void AgregarCliente_Click(object sender, EventArgs e)
         {
-            var formClientes = new Trabajo_1.clientes.Form2();
-            formClientes.ShowDialog();
-
-            if (formClientes.ClienteAgregado)
+            using (var formClientes = new Form2())
             {
-                CargarClientes(); // Solo refresca si realmente se agregó algo
+                if (formClientes.ShowDialog() == DialogResult.OK)
+                {
+                    // refrescar lista de clientes si es necesario
+                    CargarClientes();
+                }
             }
+            CargarClientes();
         }
 
         private void btnFacturas_Click(object sender, EventArgs e)

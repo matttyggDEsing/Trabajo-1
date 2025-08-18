@@ -1,7 +1,7 @@
-﻿using System;
-using System.Data;
+﻿using Microsoft.Data.Sqlite;
+using System;
 using System.Windows.Forms;
-using Microsoft.Data.Sqlite;
+using Trabajo_1.DB;
 
 namespace Trabajo_1
 {
@@ -10,32 +10,57 @@ namespace Trabajo_1
         public FormFacturas()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
+        private void CargarClientes()
+        {
+            try
+            {
+                cmbClientes.Items.Clear();
+
+                // 👉 Agregamos primero la opción "mostrar todas"
+                cmbClientes.Items.Add(new
+                {
+                    Id = 0,
+                    Nombre = "Mostrar todas las facturas",
+                    Cuit = ""
+                });
+
+                using var conexion = new Microsoft.Data.Sqlite.SqliteConnection("Data Source=sistema.db");
+                conexion.Open();
+
+                string sql = "SELECT Id, Nombre, Cuit FROM Clientes ORDER BY Nombre";
+
+                using var cmd = new Microsoft.Data.Sqlite.SqliteCommand(sql, conexion);
+                using var lector = cmd.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    cmbClientes.Items.Add(new
+                    {
+                        Id = lector.GetInt32(0),
+                        Nombre = lector.GetString(1),
+                        Cuit = lector.GetString(2)
+                    });
+                }
+
+                cmbClientes.DisplayMember = "Nombre";
+                cmbClientes.ValueMember = "Id";
+
+                // 👉 dejamos seleccionada la opción "Mostrar todas" por defecto
+                cmbClientes.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar clientes:\n{ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void FormFacturas_Load(object sender, EventArgs e)
         {
-            using var conexion = new SqliteConnection("Data Source=sistema.db");
-            conexion.Open();
-
-            // Cargar clientes  
-            using var cmdClientes = new SqliteCommand("SELECT Id, Nombre FROM Clientes", conexion);
-            using var readerClientes = cmdClientes.ExecuteReader();
-            while (readerClientes.Read())
-            {
-                cmbClientes.Items.Add(new ComboboxItem
-                {
-                    Text = readerClientes.GetString(1),
-                    Value = readerClientes.GetInt64(0)
-                });
-            }
-
-            // Seleccionar la fecha actual por defecto  
-            dtpFecha.Value = DateTime.Today;
-
-            // Mostrar facturas de hoy al cargar  
             CargarFacturas();
+            CargarClientes();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -43,65 +68,96 @@ namespace Trabajo_1
             CargarFacturas();
         }
 
-        private void dtpFecha_ValueChanged(object sender, EventArgs e)
-        {
-            CargarFacturas();
-        }
-
         private void CargarFacturas()
         {
-            using var conexion = new SqliteConnection("Data Source=sistema.db");
-            conexion.Open();
+            try
+            {
+                dgvFacturas.Rows.Clear();
+                dgvFacturas.Columns.Clear();
 
-            string sql = @"
+                // Definir columnas del DataGridView
+                dgvFacturas.Columns.Add("FacturaId", "Factura N°");
+                dgvFacturas.Columns.Add("FechaFactura", "Fecha");
+                dgvFacturas.Columns.Add("Cliente", "Cliente");
+                dgvFacturas.Columns.Add("Producto", "Producto");
+                dgvFacturas.Columns.Add("Cantidad", "Cantidad");
+                dgvFacturas.Columns.Add("PrecioUnitario", "Precio Unit.");
+                dgvFacturas.Columns.Add("Subtotal", "Subtotal");
+
+                using var conexion = new Microsoft.Data.Sqlite.SqliteConnection("Data Source=sistema.db");
+                conexion.Open();
+
+                string sql = @"
         SELECT 
             f.Id AS FacturaId,
-            f.Fecha,
+            f.Fecha AS FechaFactura,
             c.Nombre AS Cliente,
             p.Nombre AS Producto,
             fp.Cantidad,
             p.Precio AS PrecioUnitario,
-            (fp.Cantidad * p.Precio) AS Subtotal,
-            ROW_NUMBER() OVER() AS RowId -- 🔹 Columna única para evitar conflicto
+            (fp.Cantidad * p.Precio) AS Subtotal
         FROM Facturas f
-        JOIN Clientes c ON c.Id = f.ClienteId
-        JOIN FacturaProductos fp ON fp.FacturaId = f.Id
-        JOIN Productos p ON p.Id = fp.ProductoId
-        WHERE date(f.Fecha) = date(@fecha)";
+        INNER JOIN Clientes c ON f.ClienteId = c.Id
+        INNER JOIN FacturaProductos fp ON f.Id = fp.FacturaId
+        INNER JOIN Productos p ON fp.ProductoId = p.Id
+        WHERE 1=1
+        ";
 
-            if (cmbClientes.SelectedItem is ComboboxItem clienteSel)
-                sql += " AND f.ClienteId = @clienteId";
+                // Filtro por fecha (solo si el check está marcado)
+                if (chkFiltrarFecha.Checked)
+                {
+                    sql += " AND DATE(f.Fecha) = DATE(@fecha)";
+                }
 
-            sql += " ORDER BY f.Fecha, f.Id;";
+                // Filtro por cliente (solo si no es "Mostrar todas")
+                if (cmbClientes.SelectedItem != null)
+                {
+                    dynamic clienteSel = cmbClientes.SelectedItem;
+                    if (clienteSel.Id != 0)
+                    {
+                        sql += " AND f.ClienteId = @clienteId";
+                    }
+                }
 
-            using var cmd = new SqliteCommand(sql, conexion);
-            cmd.Parameters.AddWithValue("@fecha", dtpFecha.Value.ToString("yyyy-MM-dd"));
-            if (cmbClientes.SelectedItem is ComboboxItem cliSel)
-                cmd.Parameters.AddWithValue("@clienteId", cliSel.Value);
+                using var cmd = new Microsoft.Data.Sqlite.SqliteCommand(sql, conexion);
 
-            using var reader = cmd.ExecuteReader();
+                // Asignar parámetros solo si corresponde
+                if (chkFiltrarFecha.Checked)
+                {
+                    cmd.Parameters.AddWithValue("@fecha", dtpFecha.Value.Date);
+                }
 
-            var dt = new DataTable();
-            dt.BeginLoadData();  // Evita validar mientras carga
-            dt.Load(reader);
-            dt.EndLoadData();    // Ahora no dará error porque las filas ya son únicas
+                if (cmbClientes.SelectedItem != null)
+                {
+                    dynamic clienteSel = cmbClientes.SelectedItem;
+                    if (clienteSel.Id != 0)
+                    {
+                        cmd.Parameters.AddWithValue("@clienteId", clienteSel.Id);
+                    }
+                }
 
-            dgvFacturas.DataSource = dt;
+                using var lector = cmd.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    dgvFacturas.Rows.Add(
+                        lector["FacturaId"],
+                        Convert.ToDateTime(lector["FechaFactura"]).ToString("dd/MM/yyyy"),
+                        lector["Cliente"],
+                        lector["Producto"],
+                        lector["Cantidad"],
+                        lector["PrecioUnitario"],
+                        lector["Subtotal"]
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar facturas:\n{ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
-
-
-        private void dgvFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-    }
-
-    public class ComboboxItem
-    {
-        public string Text { get; set; }
-        public object Value { get; set; }
-        public override string ToString() => Text;
     }
 }
