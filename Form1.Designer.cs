@@ -36,9 +36,7 @@
             AgregarCliente = new Button();
             btnFacturas = new Button();
             btnAgregarProducto = new Button();
-            btnActualizar = new Button();
             dgvProductos = new DataGridView();
-            btnBorrar = new Button();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
@@ -197,38 +195,16 @@
             btnAgregarProducto.UseVisualStyleBackColor = true;
             btnAgregarProducto.Click += btnAgregarProducto_Click;
             // 
-            // btnActualizar
-            // 
-            btnActualizar.Location = new Point(586, 312);
-            btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(79, 30);
-            btnActualizar.TabIndex = 0;
-            btnActualizar.Text = "Actualizar Productos";
-            btnActualizar.Click += btnActualizar_Click;
-            // 
             // dgvProductos
             // 
-            dgvProductos.AllowUserToAddRows = false;
-            dgvProductos.AllowUserToDeleteRows = false;
-            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProductos.Location = new Point(80, 151);
             dgvProductos.Name = "dgvProductos";
-            dgvProductos.ReadOnly = true;
-            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProductos.Size = new Size(500, 200);
-            dgvProductos.TabIndex = 0;
-            dgvProductos.Columns.Add("Producto", "Producto");
-            dgvProductos.Columns.Add("Cantidad", "Cantidad");
-            dgvProductos.Columns.Add("PrecioUnitario", "Precio Unit.");
-            dgvProductos.Columns.Add("Subtotal", "Subtotal");
-            // 
-            // btnBorrar
-            // 
-            btnBorrar.Location = new Point(586, 278);
-            btnBorrar.Name = "btnBorrar";
-            btnBorrar.Size = new Size(79, 28);
-            btnBorrar.TabIndex = 17;
-            btnBorrar.Text = "Borrar";
+            dgvProductos.AllowUserToAddRows = true;
+            dgvProductos.AllowUserToDeleteRows = true;
+            dgvProductos.ReadOnly = false;
+            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             // 
             // Form1
             // 
@@ -252,8 +228,6 @@
             Controls.Add(lblCliente);
             Controls.Add(txtCuit);
             Controls.Add(dgvProductos);
-            Controls.Add(btnBorrar);
-            Controls.Add(btnActualizar);
             Controls.Add(btnAgregarProducto);
             Name = "Form1";
             Text = "Facturación Productos";
@@ -263,9 +237,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
-        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnFacturas;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblCuit;

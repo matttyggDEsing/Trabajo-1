@@ -26,13 +26,40 @@ namespace Trabajo_1
         private void Form1_Load(object sender, EventArgs e)
         {
             BaseDatos.Inicializar();
-            LimpiarFormulario(); // Usamos LimpiarFormulario para la carga inicial
-
+            LimpiarFormulario();
 
             txtCuit.ReadOnly = true;
             txtPrecio.ReadOnly = true;
             txtTotal.ReadOnly = true;
+
+            // Evitar columnas duplicadas
+            dgvProductos.Columns.Clear();
+
+            // Definir columnas con nombres internos consistentes
+            dgvProductos.Columns.Add("Producto", "Producto");
+            dgvProductos.Columns.Add("Cantidad", "Cantidad");
+            dgvProductos.Columns.Add("Precio", "Precio Unit.");
+            dgvProductos.Columns.Add("Subtotal", "Subtotal");
+
+            dgvProductos.Columns["Subtotal"].ReadOnly = true;
+
+            // Evento para recalcular subtotal
+            dgvProductos.CellEndEdit += (s, ev) =>
+            {
+                if (ev.ColumnIndex == dgvProductos.Columns["Precio"].Index ||
+                    ev.ColumnIndex == dgvProductos.Columns["Cantidad"].Index)
+                {
+                    var row = dgvProductos.Rows[ev.RowIndex];
+                    if (!row.IsNewRow)
+                    {
+                        decimal precio = Convert.ToDecimal(row.Cells["Precio"].Value ?? 0);
+                        int cantidad = Convert.ToInt32(row.Cells["Cantidad"].Value ?? 1);
+                        row.Cells["Subtotal"].Value = precio * cantidad;
+                    }
+                }
+            };
         }
+
 
 
 
@@ -166,39 +193,43 @@ namespace Trabajo_1
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            // Obtener el cliente seleccionado correctamente
-            Cliente clienteSeleccionado = cmbClientes.SelectedItem as Cliente;
-
-            if (clienteSeleccionado != null)
+            if (cmbClientes.SelectedItem == null)
             {
-                if (!itemsFactura.Any())
-                {
-                    MessageBox.Show("No hay productos en la factura.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                var factura = new Factura { Cliente = clienteSeleccionado };
-                foreach (var item in itemsFactura)
-                {
-                    factura.AgregarItem(item.Producto, item.Cantidad);
-                }
-
-                try
-                {
-                    BaseDatos.GuardarFactura(factura);
-                    MessageBox.Show("Factura guardada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarFormulario();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al guardar la factura: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Seleccione un cliente.");
+                return;
             }
-            else
+
+            // Obtener cliente
+            var cliente = new Cliente
             {
-                MessageBox.Show("Por favor, seleccione un cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Nombre = cmbClientes.Text,
+                Cuit = txtCuit.Text
+            };
+
+            // Crear factura
+            var factura = new Factura { Cliente = cliente };
+
+            // Recorrer dgvProductos y armar los items
+            foreach (DataGridViewRow row in dgvProductos.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                string nombreProducto = row.Cells["Producto"].Value?.ToString() ?? "";
+                decimal precio = Convert.ToDecimal(row.Cells["Precio"].Value ?? 0);
+                int cantidad = Convert.ToInt32(row.Cells["Cantidad"].Value ?? 1);
+
+                var producto = new Producto { Nombre = nombreProducto, Precio = precio };
+                factura.AgregarItem(producto, cantidad);
             }
+
+            // Guardar en la base de datos
+            BaseDatos.GuardarFactura(factura);
+
+            MessageBox.Show("Factura guardada correctamente.");
+            dgvProductos.Rows.Clear();
+            txtTotal.Text = "0";
         }
+
 
         private void ActualizarListaYTotal()
         {
