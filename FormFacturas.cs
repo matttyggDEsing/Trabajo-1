@@ -68,6 +68,12 @@ namespace Trabajo_1
             CargarFacturas();
         }
 
+        private void dgvFacturas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            var facturaId = Convert.ToInt64(dgvFacturas.Rows[e.RowIndex].Cells["FacturaId"].Value);
+            new VerFactura(facturaId).ShowDialog();
+        }
         private void CargarFacturas()
         {
             try
@@ -134,7 +140,9 @@ namespace Trabajo_1
                     {
                         cmd.Parameters.AddWithValue("@clienteId", clienteSel.Id);
                     }
+
                 }
+
 
                 using var lector = cmd.ExecuteReader();
 
@@ -158,6 +166,9 @@ namespace Trabajo_1
             }
         }
 
-
+        private void dgvFacturas_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvFacturas.CellDoubleClick += dgvFacturas_CellDoubleClick;
+        }
     }
 }
