@@ -9,7 +9,9 @@ namespace Trabajo_1.productos
         public bool ProductoAgregado { get; private set; } = false;
         public FormAgregarProducto()
         {
+
             InitializeComponent();
+            ModernTheme.Apply(this);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
 
@@ -43,6 +45,7 @@ namespace Trabajo_1.productos
 
             MessageBox.Show("Producto agregado con éxito.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
+            ProductoAgregado = true;
             this.Close();
         }
 

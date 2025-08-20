@@ -10,6 +10,7 @@ namespace Trabajo_1
         public FormFacturas()
         {
             InitializeComponent();
+            ModernTheme.Apply(this);
         }
         private void CargarClientes()
         {
@@ -169,6 +170,11 @@ namespace Trabajo_1
         private void dgvFacturas_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             dgvFacturas.CellDoubleClick += dgvFacturas_CellDoubleClick;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FormFacturas.ActiveForm.Close();
         }
     }
 }

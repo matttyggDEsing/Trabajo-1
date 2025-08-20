@@ -11,6 +11,7 @@ namespace Trabajo_1
         public Form1()
         {
             InitializeComponent();
+            ModernTheme.Apply(this);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             Trabajo_1.clientes.Form2 clientesForm = new Trabajo_1.clientes.Form2();

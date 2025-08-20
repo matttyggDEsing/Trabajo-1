@@ -15,6 +15,7 @@ namespace Trabajo_1
         public VerFactura(long facturaId)
         {
             InitializeComponent();
+            ModernTheme.Apply(this);
             _facturaId = facturaId;
         }
 

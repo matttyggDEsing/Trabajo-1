@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RDs75HzbvsA=",
+  "dgSpecHash": "x46S6qjgBsA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Trabajo 1.csproj",
   "expectedPackageFiles": [
@@ -41,7 +41,10 @@
     "C:\\Users\\Maty Anderegg\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
     "C:\\Users\\Maty Anderegg\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\Maty Anderegg\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\Maty Anderegg\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\Maty Anderegg\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Maty Anderegg\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.17\\microsoft.netcore.app.runtime.win-x64.8.0.17.nupkg.sha512",
+    "C:\\Users\\Maty Anderegg\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.17\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.17.nupkg.sha512",
+    "C:\\Users\\Maty Anderegg\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.17\\microsoft.aspnetcore.app.runtime.win-x64.8.0.17.nupkg.sha512"
   ],
   "logs": []
 }

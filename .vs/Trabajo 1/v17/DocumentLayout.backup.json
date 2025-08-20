@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\formfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:formfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\formfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:formfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\verfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:verfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,6 +47,26 @@
       "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\moderntheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:moderntheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\splash.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:splash.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\modelos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:modelos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,44 +75,8 @@
       "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:verfactura.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\formfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:formfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\formfacturas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:formfacturas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\formfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:formfacturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|solutionrelative:agregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{18619DEF-D562-442E-B22B-48FAF4C92F29}|Trabajo 1.csproj|c:\\users\\maty anderegg\\desktop\\segundo cuatrimestre\\programacion 2\\trabajo 1\\agregarproducto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -103,31 +119,140 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "VerFactura.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.Designer.cs",
-              "RelativeDocumentMoniker": "VerFactura.Designer.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.Designer.cs",
-              "RelativeToolTip": "VerFactura.Designer.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAawFEAAAAtAAAAAAAAAA==",
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T23:25:27.178Z"
+              "WhenOpened": "2025-08-18T22:56:24.39Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VerFactura.cs",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.cs",
-              "RelativeDocumentMoniker": "VerFactura.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.cs",
-              "RelativeToolTip": "VerFactura.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAH0AAAA1AAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "Splash.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Splash.cs",
+              "RelativeDocumentMoniker": "Splash.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Splash.cs [Design]",
+              "RelativeToolTip": "Splash.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T23:25:08.836Z",
+              "WhenOpened": "2025-08-19T13:02:40.109Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAABAAAAAAAAAAArwBgBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T03:01:12.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ModernTheme.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\ModernTheme.cs",
+              "RelativeDocumentMoniker": "ModernTheme.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\ModernTheme.cs",
+              "RelativeToolTip": "ModernTheme.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAgwHEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:56:47.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Splash.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Splash.cs",
+              "RelativeDocumentMoniker": "Splash.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Splash.cs",
+              "RelativeToolTip": "Splash.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T13:03:04.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AgregarProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.cs",
+              "RelativeDocumentMoniker": "AgregarProducto.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AgregarProducto.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T14:29:16.921Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AgregarProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.cs",
+              "RelativeDocumentMoniker": "AgregarProducto.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.cs",
+              "RelativeToolTip": "AgregarProducto.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAC8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T14:29:39.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Clientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.cs",
+              "RelativeDocumentMoniker": "Clientes.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Clientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T02:56:28.929Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Clientes.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.cs",
+              "RelativeDocumentMoniker": "Clientes.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.cs",
+              "RelativeToolTip": "Clientes.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T03:05:53.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormFacturas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\FormFacturas.cs",
+              "RelativeDocumentMoniker": "FormFacturas.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\FormFacturas.cs [Design]",
+              "RelativeToolTip": "FormFacturas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T22:53:55.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VerFactura.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.cs",
+              "RelativeDocumentMoniker": "VerFactura.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.cs",
+              "RelativeToolTip": "VerFactura.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T23:25:08.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "VerFactura.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.cs",
               "RelativeDocumentMoniker": "VerFactura.cs",
@@ -138,31 +263,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormFacturas.cs [Dise\u00F1o]",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T03:16:21.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Splash.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Splash.Designer.cs",
+              "RelativeDocumentMoniker": "Splash.Designer.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Splash.Designer.cs",
+              "RelativeToolTip": "Splash.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T13:05:43.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormFacturas.cs",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\FormFacturas.cs",
               "RelativeDocumentMoniker": "FormFacturas.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\FormFacturas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormFacturas.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\FormFacturas.cs",
+              "RelativeToolTip": "FormFacturas.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAcwLAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T22:53:55.183Z"
+              "WhenOpened": "2025-08-12T22:54:21.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T03:01:12.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "DB.cs",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\DB.cs",
               "RelativeDocumentMoniker": "DB.cs",
@@ -174,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 18,
               "Title": "FormFacturas.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\FormFacturas.Designer.cs",
               "RelativeDocumentMoniker": "FormFacturas.Designer.cs",
@@ -186,32 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormFacturas.cs",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\FormFacturas.cs",
-              "RelativeDocumentMoniker": "FormFacturas.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\FormFacturas.cs",
-              "RelativeToolTip": "FormFacturas.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAmwKEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T22:54:21.495Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AgregarProducto.cs",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.cs",
-              "RelativeDocumentMoniker": "AgregarProducto.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.cs",
-              "RelativeToolTip": "AgregarProducto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:29:39.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "Modelos.cs",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Modelos.cs",
               "RelativeDocumentMoniker": "Modelos.cs",
@@ -223,99 +335,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T03:16:21.565Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AgregarProducto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.cs",
-              "RelativeDocumentMoniker": "AgregarProducto.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "AgregarProducto.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:29:16.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAqwAABAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAqwOQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T02:59:35.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T22:56:24.39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Clientes.cs",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.cs",
-              "RelativeDocumentMoniker": "Clientes.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.cs",
-              "RelativeToolTip": "Clientes.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAIBJwB8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T03:05:53.621Z",
+              "WhenOpened": "2025-08-12T02:59:35.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "VerFactura.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.Designer.cs",
+              "RelativeDocumentMoniker": "VerFactura.Designer.cs",
+              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\VerFactura.Designer.cs",
+              "RelativeToolTip": "VerFactura.Designer.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAawFEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T23:25:27.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "Form1.resx",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.resx",
               "RelativeDocumentMoniker": "Form1.resx",
               "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Form1.resx",
               "RelativeToolTip": "Form1.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-08-12T03:00:49.217Z"
+              "WhenOpened": "2025-08-12T03:00:49.217Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "Clientes.resx",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.resx",
               "RelativeDocumentMoniker": "Clientes.resx",
               "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.resx",
               "RelativeToolTip": "Clientes.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-08-12T02:56:38.25Z"
+              "WhenOpened": "2025-08-12T02:56:38.25Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Clientes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.cs",
-              "RelativeDocumentMoniker": "Clientes.cs",
-              "ToolTip": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Clientes.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T02:56:28.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "AgregarProducto.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\AgregarProducto.Designer.cs",
               "RelativeDocumentMoniker": "AgregarProducto.Designer.cs",
@@ -323,11 +392,12 @@
               "RelativeToolTip": "AgregarProducto.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:29:27.762Z"
+              "WhenOpened": "2025-08-14T14:29:27.762Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Clientes.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Maty Anderegg\\Desktop\\Segundo Cuatrimestre\\Programacion 2\\Trabajo 1\\Clientes.Designer.cs",
               "RelativeDocumentMoniker": "Clientes.Designer.cs",
@@ -335,7 +405,8 @@
               "RelativeToolTip": "Clientes.Designer.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAIBJwIQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T02:56:31.886Z"
+              "WhenOpened": "2025-08-12T02:56:31.886Z",
+              "EditorCaption": ""
             }
           ]
         }

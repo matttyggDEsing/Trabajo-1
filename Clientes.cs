@@ -16,6 +16,7 @@ namespace Trabajo_1.clientes
         public Form2()
         {
             InitializeComponent();
+            ModernTheme.Apply(this);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

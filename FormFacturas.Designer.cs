@@ -29,6 +29,7 @@
             cmbClientes = new ComboBox();
             lblCliente = new Label();
             lblFecha = new Label();
+            btnSalir = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvFacturas).BeginInit();
             SuspendLayout();
             // 
@@ -99,11 +100,22 @@
             lblFecha.TabIndex = 3;
             lblFecha.Text = "Fecha";
             // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(680, 436);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(100, 27);
+            btnSalir.TabIndex = 7;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // FormFacturas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 471);
+            Controls.Add(btnSalir);
             Controls.Add(btnBuscar);
             Controls.Add(dtpFecha);
             Controls.Add(chkFiltrarFecha);
@@ -121,5 +133,6 @@
             ResumeLayout(false);
             PerformLayout();
         }
+        private Button btnSalir;
     }
 }

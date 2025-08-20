@@ -84,3 +84,4 @@ C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin
 C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
 C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo_1.VerFactura.resources
+C:\Users\Maty Anderegg\Desktop\Segundo Cuatrimestre\Programacion 2\Trabajo 1\obj\Debug\net8.0-windows\Trabajo_1.Splash.resources

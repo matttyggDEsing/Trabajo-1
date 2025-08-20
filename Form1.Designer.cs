@@ -87,6 +87,7 @@
             // 
             // txtPrecio
             // 
+            txtPrecio.Enabled = false;
             txtPrecio.Location = new Point(80, 122);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(100, 23);
@@ -95,7 +96,7 @@
             // lblCantidad
             // 
             lblCantidad.AutoSize = true;
-            lblCantidad.Location = new Point(216, 125);
+            lblCantidad.Location = new Point(224, 125);
             lblCantidad.Name = "lblCantidad";
             lblCantidad.Size = new Size(55, 15);
             lblCantidad.TabIndex = 8;
@@ -103,7 +104,7 @@
             // 
             // nudCantidad
             // 
-            nudCantidad.Location = new Point(277, 122);
+            nudCantidad.Location = new Point(295, 122);
             nudCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudCantidad.Name = "nudCantidad";
             nudCantidad.Size = new Size(60, 23);
@@ -112,11 +113,11 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(368, 118);
+            btnAgregar.Location = new Point(398, 118);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(100, 27);
             btnAgregar.TabIndex = 10;
-            btnAgregar.Text = "AGREGAR";
+            btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
@@ -168,9 +169,9 @@
             // 
             // AgregarCliente
             // 
-            AgregarCliente.Location = new Point(398, 16);
+            AgregarCliente.Location = new Point(398, 17);
             AgregarCliente.Name = "AgregarCliente";
-            AgregarCliente.Size = new Size(120, 23);
+            AgregarCliente.Size = new Size(132, 23);
             AgregarCliente.TabIndex = 16;
             AgregarCliente.Text = "Agregar Cliente";
             AgregarCliente.UseVisualStyleBackColor = true;
@@ -180,7 +181,7 @@
             // 
             btnFacturas.Location = new Point(80, 420);
             btnFacturas.Name = "btnFacturas";
-            btnFacturas.Size = new Size(150, 30);
+            btnFacturas.Size = new Size(164, 30);
             btnFacturas.TabIndex = 0;
             btnFacturas.Text = "MOSTRAR FACTURAS";
             btnFacturas.Click += btnFacturas_Click;
@@ -189,7 +190,7 @@
             // 
             btnAgregarProducto.Location = new Point(398, 88);
             btnAgregarProducto.Name = "btnAgregarProducto";
-            btnAgregarProducto.Size = new Size(120, 24);
+            btnAgregarProducto.Size = new Size(132, 24);
             btnAgregarProducto.TabIndex = 17;
             btnAgregarProducto.Text = "Agregar Producto";
             btnAgregarProducto.UseVisualStyleBackColor = true;
@@ -197,20 +198,18 @@
             // 
             // dgvProductos
             // 
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProductos.Location = new Point(80, 151);
             dgvProductos.Name = "dgvProductos";
-            dgvProductos.Size = new Size(500, 200);
-            dgvProductos.AllowUserToAddRows = true;
-            dgvProductos.AllowUserToDeleteRows = true;
-            dgvProductos.ReadOnly = false;
             dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProductos.Size = new Size(500, 200);
+            dgvProductos.TabIndex = 17;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(707, 540);
+            ClientSize = new Size(604, 481);
             Controls.Add(btnFacturas);
             Controls.Add(AgregarCliente);
             Controls.Add(cmbClientes);
