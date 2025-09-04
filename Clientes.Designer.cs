@@ -41,49 +41,55 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(100, 20);
+            lblTitulo.Location = new Point(117, 23);
+            lblTitulo.Margin = new Padding(4, 0, 4, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(180, 24);
+            lblTitulo.Size = new Size(156, 24);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Agregar Cliente";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(50, 70);
+            lblNombre.Location = new Point(58, 81);
+            lblNombre.Margin = new Padding(4, 0, 4, 0);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(47, 13);
+            lblNombre.Size = new Size(54, 15);
             lblNombre.TabIndex = 1;
             lblNombre.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(120, 67);
+            txtNombre.Location = new Point(140, 77);
+            txtNombre.Margin = new Padding(4, 3, 4, 3);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(200, 20);
+            txtNombre.Size = new Size(233, 23);
             txtNombre.TabIndex = 2;
             // 
             // lblCuit
             // 
             lblCuit.AutoSize = true;
-            lblCuit.Location = new Point(50, 110);
+            lblCuit.Location = new Point(58, 127);
+            lblCuit.Margin = new Padding(4, 0, 4, 0);
             lblCuit.Name = "lblCuit";
-            lblCuit.Size = new Size(35, 13);
+            lblCuit.Size = new Size(35, 15);
             lblCuit.TabIndex = 3;
             lblCuit.Text = "CUIT:";
             // 
             // txtCuit
             // 
-            txtCuit.Location = new Point(120, 107);
+            txtCuit.Location = new Point(140, 123);
+            txtCuit.Margin = new Padding(4, 3, 4, 3);
             txtCuit.Name = "txtCuit";
-            txtCuit.Size = new Size(200, 20);
+            txtCuit.Size = new Size(233, 23);
             txtCuit.TabIndex = 4;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(120, 150);
+            btnGuardar.Location = new Point(140, 173);
+            btnGuardar.Margin = new Padding(4, 3, 4, 3);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(75, 30);
+            btnGuardar.Size = new Size(88, 35);
             btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -91,9 +97,10 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(220, 150);
+            btnCancelar.Location = new Point(257, 173);
+            btnCancelar.Margin = new Padding(4, 3, 4, 3);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 30);
+            btnCancelar.Size = new Size(88, 35);
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -101,9 +108,9 @@
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(384, 211);
+            ClientSize = new Size(448, 243);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
             Controls.Add(txtCuit);
@@ -112,11 +119,13 @@
             Controls.Add(lblNombre);
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestión de Clientes";
+            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
