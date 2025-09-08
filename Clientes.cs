@@ -45,12 +45,17 @@ namespace Trabajo_1.clientes
             ClienteAgregado = true;
             this.Close();
         }
-      
+
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

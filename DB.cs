@@ -60,7 +60,16 @@ namespace Trabajo_1.DB
                 FOREIGN KEY (FacturaId) REFERENCES Facturas(Id),
                 FOREIGN KEY (ProductoId) REFERENCES Productos(Id)
             );
+            """,
             """
+            CREATE TABLE IF NOT EXISTS Usuarios (
+                Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                Nombre TEXT NOT NULL UNIQUE,
+                Password TEXT NOT NULL,
+                Perm TEXT NOT NULL
+            );
+            """,
+           
         };
 
                 // Ejecutar comandos

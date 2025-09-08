@@ -26,7 +26,7 @@ namespace Trabajo_1
             {
                 splash.ShowDialog();
             }
-            Application.Run(new Form1()); // Aquí debe estar tu formulario principal
+            Application.Run(new Login()); // Aquí debe estar tu formulario principal
                                           // Debe ejecutarse ANTES de crear cualquier XFont
             
         }
